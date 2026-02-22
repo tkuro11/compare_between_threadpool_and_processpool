@@ -1,5 +1,4 @@
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
-from dataclasses import dataclass
 from timeit import default_timer
 import numpy as np
 from typing import Callable
@@ -72,7 +71,7 @@ def main():
     # numpy calculation is too fast, so need to increase the data
     n = 1_000_000_000
     div = n // nthread
-    division = [RANGE(div * i + 1, div * i + div + 1) for i in range(nthread)]
+    division = [range(div * i + 1, div * i + div + 1) for i in range(nthread)]
 
     print("#### SEQUENTIAL-Numpy ####")
     timeit(sequential, division, 1, sumup_numpy)

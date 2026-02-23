@@ -11,7 +11,7 @@ In CPython, the **Global Interpreter Lock (GIL)** is a mutex that protects acces
 The goal of this project is to demonstrate how the GIL affects performance across different types of workloads:
 
 1. **CPU-Bound Tasks:** Heavy mathematical computations (e.g., calculating factorials or primes). These require constant CPU cycles.
-2. **I/O-Bound Tasks:** Tasks that involve waiting (e.g., `time.sleep()`, file I/O, or network requests). The GIL is released during these waiting periods.
+2. **Lock Free Task:** Tasks that involve non python object's operation and releases GIL in the task(e.g., numpy or ...).
 
 ## Comparison Table
 
@@ -20,7 +20,7 @@ The goal of this project is to demonstrate how the GIL affects performance acros
 | **Parallelism** | Limited by GIL (Concurrency only) | True Parallelism (Bypasses GIL) |
 | **Memory** | Shares memory space | Separate memory space per process |
 | **Overhead** | Low (Lightweight threads) | High (Starting new processes/IPC) |
-| **Best For** | I/O-bound tasks (API calls, DB queries) | CPU-bound tasks (Data processing, Math) |
+| **Best For** | I/O tasks (API calls, DB queries) | CPU-bound tasks (Data processing, Math) |
 
 ## Getting Started
 
@@ -35,7 +35,7 @@ Clone the repository and run the main script to see the benchmark results:
 ```bash
 git clone https://github.com/tkuro11/compare_between_threadpool_and_processpool.git
 cd compare_between_threadpool_and_processpool
-python main.py
+python comparison.py
 
 ```
 

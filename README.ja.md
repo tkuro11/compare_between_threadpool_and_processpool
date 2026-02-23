@@ -22,21 +22,22 @@ Python（CPython）には **GIL (Global Interpreter Lock)** が存在するた�
 
 このプロジェクトでは、以下の2パターンのタスクを実行し、実行時間を比較します。
 
-1. **CPU Bound Task:** 重い計算処理（例：フィボナッチ関数の計算、大きなループ処理など）。
-2. **I/O Bound Task:** 待機処理（例：`time.sleep()`、ネットワークリクエストなど）。
+1. **CPU Bound Task:** 重い計算処理（例：大きなループ処理など）。
+2. **Lock Free (can threadable) Task**: CネイティブコードなどでGIL無効(Python Objectを操作しない)．（例：numpy)
 
 ## 実行方法
 
 ### 依存関係
 
 Python 3.x がインストールされている必要があります。
+CPU利用率を出す場合はpsutilが必要です．
 
 ### 実行
 
 メインのスクリプトを実行して結果を確認します。
 
 ```bash
-python main.py
+python comparison.py
 
 ```
 
@@ -47,7 +48,7 @@ python main.py
 * `ThreadPoolExecutor` は、GILによるロックの競合が発生し、シングルスレッドでの実行と同等か、あるいはスレッド切り替えのオーバーヘッドにより遅くなる可能性があります。
 
 
-* **I/O Bound な処理の場合:**
+* **Lock Free な処理の場合:**
 * 両者ともに並列化の恩恵を受けられます。
 * ただし、プロセスの起動コストがない分、`ThreadPoolExecutor` の方がわずかに効率的な場合が多いです。
 

@@ -39,14 +39,22 @@ def processpool(division: list[range], maxworker: int, worker: Callable) -> int:
 
 
 def timeit(
-    func: Callable, values: list[range], maxworker: int = 1, worker: Callable = sumup
+    func: Callable,
+    values: list[range],
+    maxworker: int = 1,
+    worker: Callable = sumup,
+    iteration: int = 4,
 ) -> None:
     worker_message = f"(max_wks = {maxworker})" if func != sequential else ""
 
-    bt = default_timer()
-    func(values, maxworker, worker)
+    delta = 0
+    for _ in range(iteration):
+        bt = default_timer()
+        func(values, maxworker, worker)
+        delta += default_timer() - bt
+    average_delta = delta / iteration
     print(
-        f"{func.__name__}.{worker.__name__}{worker_message} elapsed time : {default_timer() - bt}"
+        f"{func.__name__}.{worker.__name__}{worker_message} elapsed time : {average_delta}"
     )
 
 

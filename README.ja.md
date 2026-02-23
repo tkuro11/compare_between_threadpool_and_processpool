@@ -6,12 +6,12 @@ Pythonの標準ライブラリ `concurrent.futures` に含まれる `ThreadPoolE
 
 Python（CPython）には **GIL (Global Interpreter Lock)** が存在するため、マルチスレッド環境であっても、一度に1つのスレッドしかPythonバイトコードを実行できません。
 
-* **ThreadPoolExecutor (マルチスレッド):**
+### **ThreadPoolExecutor (マルチスレッド):**
 * 同じメモリ空間を共有するため軽量ですが、GILの影響を受けます。
 * I/Oバウンドなタスク（通信待ちなど）には有効ですが、CPUバウンドなタスク（計算など）では並列化の恩恵を受けにくいです。
 
 
-* **ProcessPoolExecutor (マルチプロセス):**
+### **ProcessPoolExecutor (マルチプロセス):**
 * 別のPythonインタープリタ（プロセス）を起動するため、それぞれが独自のGILを持ちます。
 * CPUバウンドなタスクを複数のCPUコアに分散して並列実行できます。
 * プロセス間の通信やメモリのコピーにオーバーヘッドが発生します。

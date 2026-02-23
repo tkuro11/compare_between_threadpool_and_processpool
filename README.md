@@ -26,6 +26,7 @@ The goal of this project is to demonstrate how the GIL affects performance acros
 
 ### Prerequisites
 
+* uv 0.9.x or abobe
 * Python 3.x
 
 ### Running the Experiment
@@ -35,7 +36,8 @@ Clone the repository and run the main script to see the benchmark results:
 ```bash
 git clone https://github.com/tkuro11/compare_between_threadpool_and_processpool.git
 cd compare_between_threadpool_and_processpool
-python comparison.py
+uv sync
+uv run comparison.py
 
 ```
 

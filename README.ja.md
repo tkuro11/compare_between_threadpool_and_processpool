@@ -29,15 +29,18 @@ Python（CPython）には **GIL (Global Interpreter Lock)** が存在するた�
 
 ### 依存関係
 
-Python 3.x がインストールされている必要があります。
-CPU利用率を出す場合はpsutilが必要です．
+* uv 0.9.x or abobe
+* Python 3.x
 
 ### 実行
 
 メインのスクリプトを実行して結果を確認します。
 
 ```bash
-python comparison.py
+git clone https://github.com/tkuro11/compare_between_threadpool_and_processpool.git
+cd compare_between_threadpool_and_processpool
+uv sync
+uv run comparison.py
 
 ```
 

@@ -56,4 +56,4 @@ python comparison.py
 
 ## 結論
 
-Pythonにおいて、計算資源をフルに活用する必要がある場合は **ProcessPool** を、通信などの待ち時間を効率化したい場合は **ThreadPool** を選択するのが一般的です。
+Pythonにおいて、計算資源をフルに活用する必要がある場合は **ProcessPool** を、通信などの待ち時間を効率化したい場合は **ThreadPool** を選択するのが一般的です。numpyのようにGIL をリリースする場合はThreadPoolも有効ですが，十分に並列化されているnumpyの場合，あまり大きな効果は得られまん．

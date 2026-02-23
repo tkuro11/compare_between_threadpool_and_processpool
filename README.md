@@ -42,4 +42,4 @@ python comparison.py
 ## Expected Results
 
 * **For CPU-bound tasks:** You will likely observe that `ProcessPoolExecutor` is significantly faster because it utilizes multiple CPU cores simultaneously. `ThreadPoolExecutor` may even be slower than a single-threaded execution due to lock contention overhead.
-* **For I/O-bound tasks:** Both will show improvements over sequential execution, but `ThreadPoolExecutor` is generally preferred here due to lower resource consumption and faster startup times.
+* **For Lock Free tasks:** Both will show improvements over sequential execution, but `ThreadPoolExecutor` is generally preferred here due to lower resource consumption and faster startup times.

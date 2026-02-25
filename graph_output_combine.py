@@ -57,7 +57,7 @@ def parse_filename(log_name):
     e.g. 'Apple M2_python3.14_GIL' -> ('Apple M2', 'GIL')
     """
     print(log_name)
-    m = re.match(r"^(.+?)-python[\db.]+-(.+)$", log_name)
+    m = re.match(r"^(.+?)[-_]python[\db.]+[_-](.+)$", log_name)
     print(m)
     if not m:
         raise ValueError(f"Cannot parse log name: {log_name}")

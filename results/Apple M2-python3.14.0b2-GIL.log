@@ -1,0 +1,56 @@
+#### SEQUENTIAL ####
+sequential.sumup elapsed time : 3.088474552205298
+#### ThreadPool ####
+threadpool.sumup(max_wks = 1) elapsed time : 3.059732948022429
+threadpool.sumup(max_wks = 2) elapsed time : 3.1195478021982126
+threadpool.sumup(max_wks = 3) elapsed time : 3.050987239694223
+threadpool.sumup(max_wks = 4) elapsed time : 3.0706223954912275
+threadpool.sumup(max_wks = 5) elapsed time : 3.037633448257111
+threadpool.sumup(max_wks = 6) elapsed time : 3.160320594033692
+threadpool.sumup(max_wks = 7) elapsed time : 4.0697208541678265
+threadpool.sumup(max_wks = 8) elapsed time : 3.4225081664626487
+threadpool.sumup(max_wks = 9) elapsed time : 3.075421989953611
+threadpool.sumup(max_wks = 10) elapsed time : 3.090050677303225
+threadpool.sumup(max_wks = 11) elapsed time : 3.152272885257844
+threadpool.sumup(max_wks = 12) elapsed time : 3.034364885184914
+#### ProcessPool ####
+processpool.sumup(max_wks = 1) elapsed time : 3.8665311979711987
+processpool.sumup(max_wks = 2) elapsed time : 1.7752897808677517
+processpool.sumup(max_wks = 3) elapsed time : 1.4193041144753806
+processpool.sumup(max_wks = 4) elapsed time : 1.167692249873653
+processpool.sumup(max_wks = 5) elapsed time : 0.9870225315098651
+processpool.sumup(max_wks = 6) elapsed time : 1.0166480829939246
+processpool.sumup(max_wks = 7) elapsed time : 1.1348560937331058
+processpool.sumup(max_wks = 8) elapsed time : 0.9960035315016285
+processpool.sumup(max_wks = 9) elapsed time : 1.0378005940001458
+processpool.sumup(max_wks = 10) elapsed time : 0.884980344271753
+processpool.sumup(max_wks = 11) elapsed time : 0.9697615209734067
+processpool.sumup(max_wks = 12) elapsed time : 0.9227628854569048
+#### SEQUENTIAL-Numpy ####
+sequential.sumup_numpy elapsed time : 0.3805312293116003
+#### ThreadPool-Numpy ####
+threadpool.sumup_numpy(max_wks = 1) elapsed time : 0.27462194772670045
+threadpool.sumup_numpy(max_wks = 2) elapsed time : 0.40985597955295816
+threadpool.sumup_numpy(max_wks = 3) elapsed time : 0.5252620314713567
+threadpool.sumup_numpy(max_wks = 4) elapsed time : 1.007222198008094
+threadpool.sumup_numpy(max_wks = 5) elapsed time : 2.062841229257174
+threadpool.sumup_numpy(max_wks = 6) elapsed time : 2.929260541626718
+threadpool.sumup_numpy(max_wks = 7) elapsed time : 4.3503074062173255
+threadpool.sumup_numpy(max_wks = 8) elapsed time : 3.8101611980237067
+threadpool.sumup_numpy(max_wks = 9) elapsed time : 4.418368531274609
+threadpool.sumup_numpy(max_wks = 10) elapsed time : 5.22401048959
+threadpool.sumup_numpy(max_wks = 11) elapsed time : 4.899560218735132
+threadpool.sumup_numpy(max_wks = 12) elapsed time : 3.843576052051503
+#### ProcessPool-Numpy ####
+processpool.sumup_numpy(max_wks = 1) elapsed time : 0.6115088539663702
+processpool.sumup_numpy(max_wks = 2) elapsed time : 0.6019744479563087
+processpool.sumup_numpy(max_wks = 3) elapsed time : 0.7322773225605488
+processpool.sumup_numpy(max_wks = 4) elapsed time : 1.6143915937282145
+processpool.sumup_numpy(max_wks = 5) elapsed time : 2.361997969041113
+processpool.sumup_numpy(max_wks = 6) elapsed time : 1.4745579269365408
+processpool.sumup_numpy(max_wks = 7) elapsed time : 1.4960211662692018
+processpool.sumup_numpy(max_wks = 8) elapsed time : 1.6664276978117414
+processpool.sumup_numpy(max_wks = 9) elapsed time : 2.176550114469137
+processpool.sumup_numpy(max_wks = 10) elapsed time : 2.5635369792580605
+processpool.sumup_numpy(max_wks = 11) elapsed time : 2.616280833259225
+processpool.sumup_numpy(max_wks = 12) elapsed time : 2.681867395469453
